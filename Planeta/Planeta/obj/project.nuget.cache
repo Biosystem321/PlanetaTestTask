@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/Cg93qa+aY9eXRKiCMunm5KXdj3RH1r3aO5cSQ8IZxb+WWt772KPKV3ey5DVXjStWmL2pq0XRgVPi2MNLJEwpA==",
+  "dgSpecHash": "XipHYaqeOllFtOBzcSGNEozKLrLMkR6N8c5QMwMz1dwAbxUcK6SjsETxr2XZ8HOgY7fpKmfOjGESdkMrfgL3yg==",
   "success": true,
   "projectFilePath": "C:\\Users\\biosystem\\Projects\\PlanetaTestTask\\Planeta\\Planeta\\Planeta.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\biosystem\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
     "C:\\Users\\biosystem\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.0\\microsoft.aspnetcore.authentication.jwtbearer.5.0.0.nupkg.sha512",
     "C:\\Users\\biosystem\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\5.0.0\\microsoft.aspnetcore.authentication.openidconnect.5.0.0.nupkg.sha512",
     "C:\\Users\\biosystem\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
