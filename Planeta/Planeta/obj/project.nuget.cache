@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "uF36mT/f+benLbRlQ90mjpeUPPIGjgrixOSyUPnzyNWoq/lfXizCAYwkB1oq1aZgbJHv24QAY2cQVWbq4S56DA==",
+  "dgSpecHash": "cR3nMZfgMastHGtWrpxXeVw6V22PCHjr45+e1yIKkxABTS6UafKGPD7IQ4wNpXFkUk7YMeNlkmHpVKmXxLAARg==",
   "success": true,
   "projectFilePath": "C:\\Users\\biosystem\\Projects\\PlanetaTestTask\\Planeta\\Planeta\\Planeta.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\biosystem\\.nuget\\packages\\azure.core\\1.6.0\\azure.core.1.6.0.nupkg.sha512",
     "C:\\Users\\biosystem\\.nuget\\packages\\azure.identity\\1.3.0\\azure.identity.1.3.0.nupkg.sha512",
     "C:\\Users\\biosystem\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
+    "C:\\Users\\biosystem\\.nuget\\packages\\jquery\\1.4.4\\jquery.1.4.4.nupkg.sha512",
+    "C:\\Users\\biosystem\\.nuget\\packages\\jquery.validation\\1.19.3\\jquery.validation.1.19.3.nupkg.sha512",
     "C:\\Users\\biosystem\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.0\\microsoft.aspnetcore.authentication.jwtbearer.5.0.0.nupkg.sha512",
     "C:\\Users\\biosystem\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\5.0.0\\microsoft.aspnetcore.authentication.openidconnect.5.0.0.nupkg.sha512",
     "C:\\Users\\biosystem\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",

@@ -1,4 +1,5 @@
 ﻿@model Planeta.Models.User
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "Удаление пользователя";
 }
@@ -13,6 +14,16 @@
         <dt>Возраст</dt>
         <dd>
             @Model.Age
+        </dd>
+
+        <dt>Пол</dt>
+        <dd>
+            @Model.Sex
+        </dd>
+
+        <dt>Адрес</dt>
+        <dd>
+            @Model.Address
         </dd>
     </dl>
 

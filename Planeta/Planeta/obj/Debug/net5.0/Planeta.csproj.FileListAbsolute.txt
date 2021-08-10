@@ -19,7 +19,6 @@ C:\Users\biosystem\Projects\PlanetaTestTask\Planeta\Planeta\bin\Debug\net5.0\Swa
 C:\Users\biosystem\Projects\PlanetaTestTask\Planeta\Planeta\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\biosystem\Projects\PlanetaTestTask\Planeta\Planeta\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\biosystem\Projects\PlanetaTestTask\Planeta\Planeta\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\biosystem\Projects\PlanetaTestTask\Planeta\Planeta\obj\Debug\net5.0\Planeta.csprojAssemblyReference.cache
 C:\Users\biosystem\Projects\PlanetaTestTask\Planeta\Planeta\obj\Debug\net5.0\Planeta.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\biosystem\Projects\PlanetaTestTask\Planeta\Planeta\obj\Debug\net5.0\Planeta.AssemblyInfoInputs.cache
 C:\Users\biosystem\Projects\PlanetaTestTask\Planeta\Planeta\obj\Debug\net5.0\Planeta.AssemblyInfo.cs
@@ -66,3 +65,4 @@ C:\Users\biosystem\Projects\PlanetaTestTask\Planeta\Planeta\obj\Debug\net5.0\Raz
 C:\Users\biosystem\Projects\PlanetaTestTask\Planeta\Planeta\obj\Debug\net5.0\Razor\Views\Home\Delete.cshtml.g.cs
 C:\Users\biosystem\Projects\PlanetaTestTask\Planeta\Planeta\obj\Debug\net5.0\Razor\Views\Home\Edit.cshtml.g.cs
 C:\Users\biosystem\Projects\PlanetaTestTask\Planeta\Planeta\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\biosystem\Projects\PlanetaTestTask\Planeta\Planeta\obj\Debug\net5.0\Planeta.csprojAssemblyReference.cache

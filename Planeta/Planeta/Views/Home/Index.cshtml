@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<Planeta.Models.User>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "Список пользователей";
 }
@@ -9,34 +10,39 @@
 <table class="table">
     <tr>
         <th>ФИО</th>
+
         <th>Возраст</th>
+
         <th>Пол</th>
+
+        <th>Адрес</th>
+
         <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @item.Fio
-            </td>
+    <tr>
+        <td>
+            @item.Fio
+        </td>
 
-            <td>
-                @item.Age
-            </td>
+        <td>
+            @item.Age
+        </td>
 
-            <td>
-                @item.Sex
-            </td>
+        <td>
+            @item.Sex
+        </td>
 
-            <td>
-                @item.Address.ToString()
-            </td>
+        <td>
+            @item.Address
+        </td>
 
-            <td>
-                <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.Id">Изменить</a> |
-                <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.Id">Удалить</a>
-            </td>
-        </tr>
+        <td>
+            <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.Id">Изменить</a> |
+            <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.Id">Удалить</a>
+        </td>
+    </tr>
     }
 </table>

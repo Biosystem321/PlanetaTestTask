@@ -4,16 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Planeta.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Planeta.Controllers
 {
     public class HomeController : Controller
     {
-        IEnumerable<Sex> sexes = new List<Sex>
-        {
-            new Sex { Id = 1, Value = "Мужской" },
-            new Sex { Id = 2, Value = "Женский" }
-        };
 
         IUserRepository repository;
         public HomeController(IUserRepository r)
@@ -33,20 +29,36 @@ namespace Planeta.Controllers
             return NotFound();
         }
 
+        IEnumerable<string> sexes = new List<string>
+        {
+            "Мужской",
+            "Женский"
+        };
+
         public ActionResult Create()
         {
+            ViewBag.Sexes = new SelectList(sexes);
+
             return View();
         }
 
         [HttpPost]
         public ActionResult Create(User user)
-        {
-            repository.Create(user);
-            return RedirectToAction("Index");
+        {        
+            if(ModelState.IsValid)
+            {
+                repository.Create(user);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return RedirectToAction("Create");
+            }
         }
 
         public ActionResult Edit(int id)
         {
+            ViewBag.Sexes = new SelectList(sexes);            
             User user = repository.Get(id);
             if (user != null)
                 return View(user);
@@ -56,8 +68,15 @@ namespace Planeta.Controllers
         [HttpPost]
         public ActionResult Edit(User user)
         {
-            repository.Update(user);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                repository.Update(user);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return RedirectToAction("Edit");
+            }
         }
 
         [HttpGet]

@@ -1,19 +1,28 @@
 ﻿@model Planeta.Models.User
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "Редактировать пользователя";
 }
-<h2>@ViewData["Title"].</h2>
+<h2>@ViewData["Title"]</h2>
 
 <form asp-action="Edit" asp-controller="Home">
     <div>
         <input type="hidden" asp-for="Id" />
         <div class="form-group">
-            <label asp-for="Name"></label>
-            <input type="text" asp-for="Name" class="form-control" />
+            <label asp-for="Fio">ФИО</label>
+            <input type="text" asp-for="Fio" class="form-control" />
         </div>
         <div class="form-group">
-            <label asp-for="Age"></label>
+            <label asp-for="Age">Возраст</label>
             <input asp-for="Age" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Address">Адрес</label>
+            <input type="text" asp-for="Address" class="form-control  form-control-sm" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Sex">Пол</label>
+            <select asp-for="Sex" asp-items="ViewBag.Sexes"></select>
         </div>
         <div class="form-group">
             <input type="submit" value="Сохранить" class="btn btn-outline-secondary" />

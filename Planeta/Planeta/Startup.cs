@@ -33,7 +33,7 @@ namespace Planeta
             //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Planeta", Version = "v1" });
             //});
 
-            string connectionString = "Server=localhost\\SQLEXPRESS;Database=master;Trusted_Connection=True;";
+            string connectionString = "Server=localhost\\SQLEXPRESS;Database=Planeta;Trusted_Connection=True;";
             services.AddTransient<IUserRepository, UserRepository>(provider => new UserRepository(connectionString));
             services.AddControllersWithViews();
         }

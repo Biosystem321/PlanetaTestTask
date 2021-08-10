@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Dapper;
 using System.Data;
 using Microsoft.Data.SqlClient;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Planeta.Models
 {
@@ -19,6 +20,7 @@ namespace Planeta.Models
     public class UserRepository : IUserRepository
     {
         string connectionString = null;
+
         public UserRepository(string conn)
         {
             connectionString = conn;
@@ -35,7 +37,7 @@ namespace Planeta.Models
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                return db.Query<User>("SELECT * FROM users WHERE id = @id", new { id }).FirstOrDefault();
+                return db.Query<User>("SELECT * FROM users WHERE id = @Id", new { id }).FirstOrDefault();
             }
         }
 
@@ -43,7 +45,7 @@ namespace Planeta.Models
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                var sqlQuery = "INSERT INTO users (fio, age, sex, address) VALUES(@fio, @age, @sex, @address)";
+                var sqlQuery = "INSERT INTO users (fio, age, sex, address) VALUES(@Fio, @Age, @Sex, @Address)";
                 db.Execute(sqlQuery, user);
             }
         }
@@ -52,7 +54,7 @@ namespace Planeta.Models
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                var sqlQuery = "DELETE FROM users WHERE id = @id";
+                var sqlQuery = "DELETE FROM users WHERE id = @Id";
                 db.Execute(sqlQuery, new { id });
             }
         }
@@ -61,7 +63,7 @@ namespace Planeta.Models
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                var sqlQuery = "UPDATE users SET fio = @fio, age = @age, sex = @sex WHERE id = @id";
+                var sqlQuery = "UPDATE users SET fio = @Fio, age = @Age, sex = @Sex, address = @Address WHERE id = @Id";
                 db.Execute(sqlQuery, user);
             }
         }
