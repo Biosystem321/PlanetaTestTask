@@ -29,6 +29,8 @@ namespace Planeta.Models
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
+                // Get all information about user
+
                 return db.Query<User>("SELECT * FROM users").ToList();
             }
         }
@@ -37,7 +39,9 @@ namespace Planeta.Models
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                return db.Query<User>("SELECT * FROM users WHERE id = @Id", new { id }).FirstOrDefault();
+                // Get all information include address about user
+                // Чтобы взять информацию из двух таблиц, используется INNER JOIN
+                return db.Query<User>("SELECT * FROM users INNER JOIN addresses ON users.id = addresses.id WHERE users.id = @Id", new { id }).FirstOrDefault();
             }
         }
 
@@ -45,7 +49,9 @@ namespace Planeta.Models
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                var sqlQuery = "INSERT INTO users (fio, age, sex, address) VALUES(@Fio, @Age, @Sex, @Address)";
+                // Сначала вставляется информация в родительскую таблицу, затем в дочернюю
+                var sqlQuery = "INSERT INTO users (fio, age, sex) VALUES(@Fio, @Age, @Sex)" +
+                    "INSERT INTO addresses (address) VALUES (@Address);";
                 db.Execute(sqlQuery, user);
             }
         }
@@ -54,7 +60,9 @@ namespace Planeta.Models
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                var sqlQuery = "DELETE FROM users WHERE id = @Id";
+                // Сначала удаляется информация в дочерней таблице, затем в родительской
+                var sqlQuery = "DELETE FROM addresses WHERE id = @Id;" +
+                    "DELETE FROM users WHERE id = @Id;";
                 db.Execute(sqlQuery, new { id });
             }
         }
@@ -63,7 +71,9 @@ namespace Planeta.Models
         {
             using (IDbConnection db = new SqlConnection(connectionString))
             {
-                var sqlQuery = "UPDATE users SET fio = @Fio, age = @Age, sex = @Sex, address = @Address WHERE id = @Id";
+                // Сначала обновляется информация в дочерней таблице, затем в родительской
+                var sqlQuery = "UPDATE users SET fio = @Fio, age = @Age, sex = @Sex WHERE id = @Id;" +
+                    "UPDATE addresses SET address = @Address WHERE id = @Id";
                 db.Execute(sqlQuery, user);
             }
         }

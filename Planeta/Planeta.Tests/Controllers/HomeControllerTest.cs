@@ -37,7 +37,7 @@ namespace Planeta.Tests.Controllers
             HomeController controller = new HomeController(new UserRepository(connectionString));
 
             // Act
-            ViewResult result = controller.Details(13) as ViewResult;
+            ViewResult result = controller.Details(26) as ViewResult;
 
             // Assert
             Assert.IsNotNull(result);
@@ -63,7 +63,7 @@ namespace Planeta.Tests.Controllers
             HomeController controller = new HomeController(new UserRepository(connectionString));
 
             // Act
-            ViewResult result = controller.Edit(21) as ViewResult;
+            ViewResult result = controller.Edit(26) as ViewResult;
 
             //Assert
             Assert.IsNotNull(result);
